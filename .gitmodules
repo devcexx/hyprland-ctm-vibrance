@@ -1,0 +1,3 @@
+[submodule "hyprland-build/original-arch-pkgbuild"]
+	path = hyprland-build/original-arch-pkgbuild
+	url = https://gitlab.archlinux.org/archlinux/packaging/packages/hyprland

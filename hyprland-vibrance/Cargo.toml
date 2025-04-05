@@ -1,0 +1,14 @@
+[package]
+name = "hyprland-vibrance"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+clap = { version = "4.5.35", features = ["derive"] }
+derive-new = "0.7.0"
+env_logger = "0.11.8"
+log = "0.4.27"
+wayland-client = { version = "0.31.8", features = ["log"] }
+wayland-protocols = { version = "0.32.6", features = ["client"] }
+wayland-protocols-hyprland = { version = "1.1.0", features = ["client"] }
+wayland-protocols-wlr = { version = "0.3.6", features = ["client"] }
