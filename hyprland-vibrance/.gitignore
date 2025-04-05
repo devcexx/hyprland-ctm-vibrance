@@ -1,2 +1,4 @@
 /target
+/arch-dist/pkg
+/arch-dist/src
 rust_out

@@ -1,0 +1,19 @@
+pkgname='hyprland-vibrance'
+pkgver='0.1'
+pkgrel='1'
+arch=('x86_64' 'aarch64')
+makedepends=('cargo')
+depends=('gcc-libs' 'glibc' 'hyprland-custom')
+
+prepare() {
+    cp -r "$startdir/"../{Cargo.toml,Cargo.lock,src} "$srcdir"
+}
+
+build () {
+    (cd "$srcdir" && cargo build --release)
+}
+
+package () {
+    mkdir -p "$pkgdir/usr/bin"
+    cp "$srcdir"/target/release/hyprland-vibrance "$pkgdir/usr/bin"
+}
