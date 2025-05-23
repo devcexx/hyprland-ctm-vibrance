@@ -1,18 +1,18 @@
 diff --git a/src/protocols/CTMControl.cpp b/src/protocols/CTMControl.cpp
-index 322f95e..2faf144 100644
+index 315941d3..8383f0b8 100644
 --- a/src/protocols/CTMControl.cpp
 +++ b/src/protocols/CTMControl.cpp
-@@ -31,13 +31,6 @@ CHyprlandCTMControlResource::CHyprlandCTMControlResource(SP<CHyprlandCtmControlM
+@@ -33,13 +33,6 @@ CHyprlandCTMControlResource::CHyprlandCTMControlResource(SP<CHyprlandCtmControlM
          const std::array<float, 9> MAT = {wl_fixed_to_double(mat0), wl_fixed_to_double(mat1), wl_fixed_to_double(mat2), wl_fixed_to_double(mat3), wl_fixed_to_double(mat4),
                                            wl_fixed_to_double(mat5), wl_fixed_to_double(mat6), wl_fixed_to_double(mat7), wl_fixed_to_double(mat8)};
  
 -        for (auto& el : MAT) {
 -            if (el < 0.F) {
--                resource->error(HYPRLAND_CTM_CONTROL_MANAGER_V1_ERROR_INVALID_MATRIX, "a matrix component was < 0");
+-                m_resource->error(HYPRLAND_CTM_CONTROL_MANAGER_V1_ERROR_INVALID_MATRIX, "a matrix component was < 0");
 -                return;
 -            }
 -        }
 -
-         ctms[PMONITOR->szName] = MAT;
+         m_ctms[PMONITOR->m_name] = MAT;
  
-         LOGM(LOG, "CTM set for output {}: {}", PMONITOR->szName, ctms.at(PMONITOR->szName).toString());
+         LOGM(LOG, "CTM set for output {}: {}", PMONITOR->m_name, m_ctms.at(PMONITOR->m_name).toString());

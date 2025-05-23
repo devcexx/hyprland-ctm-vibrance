@@ -19,7 +19,7 @@ original_folder="original-arch-pkgbuild/"
 src_pkgbuild="$original_folder/PKGBUILD"
 
 output_folder="custom-pkgbuild/"
-dst_pkgbuild="$output_folderPKGBUILD"
+dst_pkgbuild="${output_folder}PKGBUILD"
 hyprland_patch="remove-ctm-negative-values-check.patch"
 
 rm -rf "$output_folder"
