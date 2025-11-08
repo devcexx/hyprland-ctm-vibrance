@@ -1,5 +1,12 @@
 # Hyprland (Custom build) CTM vibrance
 
+**Repository deprecated in favor of
+[hyprvibr](https://github.com/devcexx/hyprvibr), that provides a similar
+functionality, but without needing to re-build Hyprland from scratch (which is
+neat), and doesn't need a daemon running, since it runs as a Hyprland plugin.**
+
+---
+
 This a quick, low effort repository that includes two main things:
 * A hyprland-vibrance program, developed in Rust, that allows
   adjusting the saturation of a display based on the current focused
